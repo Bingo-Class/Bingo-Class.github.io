@@ -1,49 +1,36 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Redirect to Replit digicard -->
+<meta http-equiv="refresh" content="0;url=https://bingo-class.lovable.app//">
+
+<title>Bingo-Class</title>
 <style>
-html, body {
-  margin:0;
-  padding:0;
-  height:100%;
-  overflow:hidden;
-  background:black;
-}
-
-iframe{
-  position:fixed;
-  inset:0;
-  width:100vw;
-  height:100vh;
-  border:0;
-  display:block;
-}
+  /* Full-page fallback message */
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+  }
+  p {
+    max-width: 400px;
+    line-height: 1.5;
+  }
 </style>
 </head>
-
 <body>
-
-<iframe
-  id="digicardFrame"
-  allow="camera; microphone; fullscreen"
-  allowfullscreen
-></iframe>
-
-<script>
-const HOME = "https://bingo-class.lovable.app/?embed=true";
-
-const frame = document.getElementById("digicardFrame");
-
-// restore last page (same tab only)
-frame.src = sessionStorage.getItem("digicardPage") || HOME;
-
-// store iframe source every second
-setInterval(() => {
-  sessionStorage.setItem("digicardPage", frame.src);
-}, 1000);
-</script>
-
+<p>
+Redirecting to your Bingo Time…<br>
+If nothing happens, <a href="https://bingo-class.lovable.app/" target="_blank" style="color:#0f0;">click here</a>.
+</p>
 </body>
 </html>
